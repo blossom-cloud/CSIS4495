@@ -60,7 +60,7 @@ class AddProjectTask extends Component {
         <div className="container">
           <div className="row">
             <div className="col-md-8 m-auto">
-              <Link to={`/projectBoard/${id}`} className="btn btn-light">
+              <Link to={`/projectBoard/${id}`} className="btn btn-light" hidden={true}>
                 Back to Project Board
               </Link>
               <h4 className="display-4 text-center">Add Project Task</h4>
@@ -100,7 +100,7 @@ class AddProjectTask extends Component {
                     onChange={this.onChange}
                   />
                 </div>
-                <div className="form-group">
+                <div className="form-group" hidden={true}>
                   <select
                     className="form-control form-control-lg"
                     name="priority"
@@ -114,7 +114,7 @@ class AddProjectTask extends Component {
                   </select>
                 </div>
 
-                <div className="form-group">
+                <div className="form-group" hidden={true}>
                   <select
                     className="form-control form-control-lg"
                     name="status"
