@@ -27,10 +27,10 @@ class Backlog extends Component {
       }
     }
 
-    return (
+/*    return (
       <div className="container">
         <div className="row">
-          <div className="col-md-4">
+          {/!*<div className="col-md-4">*!/}
             <div className="card text-center mb-2">
               <div className="card-header bg-secondary text-white">
                 <h3>TO DO</h3>
@@ -40,8 +40,8 @@ class Backlog extends Component {
             {
               // insert tasks here
             }
-          </div>
-          <div className="col-md-4">
+          {/!*</div>*!/}
+ {/!*         <div className="col-md-4">
             <div className="card text-center mb-2">
               <div className="card-header bg-primary text-white">
                 <h3>In Progress</h3>
@@ -56,10 +56,32 @@ class Backlog extends Component {
               </div>
             </div>
             {doneItems}
-          </div>
+          </div>*!/}
         </div>
       </div>
     );
+      */
+      
+      return (
+          <div className="container">
+              <div className="row">
+                  <div className="col-md-12">
+                      <div className="card text-center mb-2">
+                          <div className="card-header bg-secondary text-white">
+                              <h3>TODO</h3>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              
+              <div className="row">
+                  <div className="col-md-12">
+                      {todoItems}
+                  </div>
+              </div>
+          </div>
+      );
+      
   }
 }
 

@@ -100,12 +100,12 @@ class UpdateProjectTask extends Component {
             <div className="col-md-8 m-auto">
               <Link
                 to={`/projectBoard/${this.state.projectIdentifier}`}
-                className="btn btn-light"
+                className="btn btn-light" hidden={true}
               >
                 Back
               </Link>
               <h2 className="display-4 text-center" style={{color:"darkblue"}}>Update Task</h2>
-              <p className="lead text-center">
+              <p className="lead text-center" hidden={true}>
                 Project Name: {this.state.projectIdentifier} | Project Task ID:{" "}
                 {this.state.projectSequence}{" "}
               </p>
@@ -144,7 +144,7 @@ class UpdateProjectTask extends Component {
                     onChange={this.onChange}
                   />
                 </div>
-                <div className="form-group">
+                <div className="form-group" hidden={true}>
                   <select
                     className="form-control form-control-lg"
                     name="priority"
@@ -158,7 +158,7 @@ class UpdateProjectTask extends Component {
                   </select>
                 </div>
 
-                <div className="form-group">
+                <div className="form-group" hidden={true}>
                   <select
                     className="form-control form-control-lg"
                     name="status"
