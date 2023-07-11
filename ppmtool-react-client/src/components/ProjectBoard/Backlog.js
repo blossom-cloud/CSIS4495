@@ -61,11 +61,11 @@ class Backlog extends Component {
       </div>
     );
       */
-      
+
       return (
           <div className="container">
-              <div className="row">
-                  <div className="col-md-12">
+              <div className="row justify-content-center">
+                  <div className="col-md-8">
                       <div className="card text-center mb-2">
                           <div className="card-header bg-secondary text-white">
                               <h3>TODO</h3>
@@ -73,15 +73,16 @@ class Backlog extends Component {
                       </div>
                   </div>
               </div>
-              
-              <div className="row">
-                  <div className="col-md-12">
+
+              <div className="row justify-content-center">
+                  <div className="col-md-8">
                       {todoItems}
                   </div>
               </div>
           </div>
       );
-      
+
+
   }
 }
 
