@@ -1,0 +1,24 @@
+builders:
+    backend:
+        # Navigate to the Spring Boot app folder
+        context: ./project_management_tool
+        # The build command for your Spring Boot app
+        command: mvn clean package -DskipTests
+    backend_output:
+        # The path to the built JAR file for your Spring Boot app
+        path: ./project_management_tool/target/project_management_tool-0.0.1-SNAPSHOT.jar
+
+deployments:
+    # Define the name of your Spring Boot app deployment
+    spring_backend:
+        # The builder to use for this deployment (in this case, the one we defined above)
+        builder: backend
+        # The output from the builder that should be deployed
+        # (in this case, the output generated in the "backend_output" step)
+        output: backend_output
+        # Add any required environment variables for your Spring Boot app
+        # For example, if your app requires a MySQL connection URL, username, and password
+        env:
+            SPRING_DATASOURCE_URL: jdbc:mysql://root:2u4CPUoXmE2qjhhO2nLR@containers-us-west-210.railway.app:7117/railway
+            SPRING_DATASOURCE_USERNAME: root
+            SPRING_DATASOURCE_PASSWORD: 2u4CPUoXmE2qjhhO2nLR
